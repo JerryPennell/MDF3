@@ -2,15 +2,51 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".MainActivity" >
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity">
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/intro_desc"
+            android:id="@+id/intro_text"
+            android:textAlignment="gravity"
+            android:layout_marginTop="15dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"/>
+
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/editText"
+            android:hint="@string/edit_text_hint"
+            android:layout_below="@+id/intro_text"
+            android:layout_alignLeft="@+id/intro_text"
+            android:layout_alignRight="@+id/intro_text"
+            android:layout_marginTop="10dp"/>
+
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView"
+            android:src="@drawable/camera_folder"
+            android:contentDescription="@string/default_image"
+            android:minWidth="256dp"
+            android:minHeight="256dp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"/>
+
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/camera_button"
+            android:id="@+id/cameraButton"
+            android:layout_marginTop="18dp"
+            android:layout_below="@+id/imageView"
+            android:layout_centerHorizontal="true"/>
 
 </RelativeLayout>

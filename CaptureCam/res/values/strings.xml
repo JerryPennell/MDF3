@@ -9,5 +9,7 @@
     <string name="lost_connection">Lost connection</string>
     <string name="wifi_connected">Wi-Fi reconnected</string>
     <string name="default_image">Default Image</string>
+    <string name="orginal">Original Image</string>
+    <string name="black_and_white">Black and White Image</string>
 
 </resources>

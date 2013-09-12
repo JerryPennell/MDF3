@@ -1,9 +1,17 @@
+/*
+ * project		CaptureCam
+ * 
+ * package		com.jpennell.capturecam
+ * 
+ * author		Jerry Pennell
+ * 
+ * date			Sep 11, 2013
+ */
 package com.jpennell.capturecam;
 
-import android.os.Bundle;
+import library.CaptureCameraStorage;
+import library.Network;
 import android.app.Activity;
-import android.view.Menu;
-
 import android.app.AlertDialog;
 import android.app.Notification;
 import android.app.NotificationManager;
@@ -14,7 +22,6 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
-import android.app.Activity;
 import android.provider.MediaStore;
 import android.support.v4.app.NotificationCompat;
 import android.util.Log;
@@ -23,22 +30,41 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-import library.CaptureCameraStorage;
-import library.Network;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class MainActivity.
+ */
 public class MainActivity extends Activity {
     // Global Variables
+    /** The _context. */
     Context _context = this;
+    
+    /** The folder text. */
     EditText folderText;
+    
+    /** The folder name. */
     String folderName = "";
+    
+    /** The Constant CAPTURE_IMAGE_ACTIVITY_REQUEST_CODE. */
     public static final int CAPTURE_IMAGE_ACTIVITY_REQUEST_CODE = 100;
+    
+    /** The _file uri. */
     private static Uri _fileUri;
 
+    /** The all notification id. */
     private final int ALL_NOTIFICATION_ID = 1;
+    
+    /** The small notification id. */
     private final int SMALL_NOTIFICATION_ID = 2;
 
 
 
+    /**
+     * Check camera hardware.
+     *
+     * @param context the context
+     */
     private void checkCameraHardware(Context context) {
         if (context.getPackageManager().hasSystemFeature(PackageManager.FEATURE_CAMERA)){
             // Device has a camera
@@ -65,6 +91,9 @@ public class MainActivity extends Activity {
     }
 
 
+    /**
+     * Take picture.
+     */
     private void takePicture() {
         // Create camera intent
         Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
@@ -77,9 +106,13 @@ public class MainActivity extends Activity {
         Log.i("TAKE_PICTURE", "Launching camera");
     }
 
+    
 
 
 
+    /**
+     * Notification.
+     */
     public void notification() {
         NotificationManager nm = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
         Notification notification = new Notification();
@@ -89,7 +122,7 @@ public class MainActivity extends Activity {
 
         NotificationCompat.Builder notifyBuilder = new NotificationCompat.Builder(_context)
                 .setSmallIcon(R.drawable.notify_icon)
-                .setContentTitle("My Cam photo saved")
+                .setContentTitle("Captured camera photo saved")
                 .setContentText("Check out the awesome picture you took!");
 
         Intent galleryIntent = new Intent(Intent.ACTION_PICK, android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
@@ -103,6 +136,9 @@ public class MainActivity extends Activity {
     }
 
 
+    /* (non-Javadoc)
+     * @see android.app.Activity#onCreate(android.os.Bundle)
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -145,6 +181,9 @@ public class MainActivity extends Activity {
     }
 
 
+    /* (non-Javadoc)
+     * @see android.app.Activity#onCreateOptionsMenu(android.view.Menu)
+     */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -153,6 +192,9 @@ public class MainActivity extends Activity {
     }
 
 
+    /* (non-Javadoc)
+     * @see android.app.Activity#onActivityResult(int, int, android.content.Intent)
+     */
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         Log.i("RESULT_CODE", String.valueOf(resultCode));
@@ -176,5 +218,5 @@ public class MainActivity extends Activity {
                 Toast.makeText(_context, "Camera app has failed", Toast.LENGTH_LONG).show();
             }
         }
-    }
+    }  
 }

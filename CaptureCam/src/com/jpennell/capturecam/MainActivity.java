@@ -179,6 +179,23 @@ public class MainActivity extends Activity {
             }
         });
     }
+    
+    /** Called when the user clicks the folder button */
+    public void folderGallery(View view) {
+    	final int RESULT_GALLERY = 0;
+
+    	Intent galleryIntent = new Intent(
+    	                    Intent.ACTION_PICK,
+    	                    android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+    	startActivityForResult(galleryIntent , RESULT_GALLERY );
+    }
+    
+    //TODO: Wire up Black and white example
+    public void blackandwhite (View view){
+     	Intent myIntent = new Intent(MainActivity.this, BlackAndWhiteImageActivity.class);
+   	     //myIntent.putExtra("id", id); //Optional parameters
+    	MainActivity.this.startActivity(myIntent);
+ }
 
 
     /* (non-Javadoc)

@@ -49,6 +49,7 @@ public final class R {
         public static final int camera_button=0x7f050004;
         public static final int default_image=0x7f050007;
         public static final int edit_text_hint=0x7f050003;
+        public static final int folder_gallery=0x7f05000a;
         public static final int intro_desc=0x7f050002;
         public static final int lost_connection=0x7f050005;
         public static final int orginal=0x7f050008;

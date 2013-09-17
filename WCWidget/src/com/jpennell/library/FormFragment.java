@@ -1,3 +1,12 @@
+/*
+ * project		WCWidget
+ * 
+ * package		com.jpennell.library
+ * 
+ * author		Jerry Pennell
+ * 
+ * date			Sep 17, 2013
+ */
 package com.jpennell.library;
 
 import android.app.Activity;
@@ -16,16 +25,50 @@ import android.widget.ListView;
 import com.jpennell.wcwidget.R;
 
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class FormFragment.
+ */
 public class FormFragment extends Fragment {
+    
+    /** The listener. */
     private formListener listener;
 
+    /**
+     * The listener interface for receiving form events.
+     * The class that is interested in processing a form
+     * event implements this interface, and the object created
+     * with that class is registered with a component using the
+     * component's <code>addformListener<code> method. When
+     * the form event occurs, that object's appropriate
+     * method is invoked.
+     *
+     * @see formEvent
+     */
     public interface formListener {
+        
+        /**
+         * On weather search.
+         */
         public void onWeatherSearch();
+        
+        /**
+         * On set widget.
+         */
         public void onSetWidget();
+        
+        /**
+         * On single day selected.
+         *
+         * @param i the i
+         */
         public void onSingleDaySelected(Integer i);
     }
 
 
+    /* (non-Javadoc)
+     * @see android.app.Fragment#onAttach(android.app.Activity)
+     */
     @Override
     public void onAttach(Activity activity) {
         super.onAttach(activity);
@@ -38,6 +81,9 @@ public class FormFragment extends Fragment {
     }
 
 
+    /* (non-Javadoc)
+     * @see android.app.Fragment#onCreate(android.os.Bundle)
+     */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,6 +93,9 @@ public class FormFragment extends Fragment {
     }
 
 
+    /* (non-Javadoc)
+     * @see android.app.Fragment#onCreateView(android.view.LayoutInflater, android.view.ViewGroup, android.os.Bundle)
+     */
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         super.onCreateView(inflater, container, savedInstanceState);
@@ -94,6 +143,9 @@ public class FormFragment extends Fragment {
     }
 
 
+    /* (non-Javadoc)
+     * @see android.app.Fragment#onCreateOptionsMenu(android.view.Menu, android.view.MenuInflater)
+     */
     @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
         inflater.inflate(R.menu.main, menu);

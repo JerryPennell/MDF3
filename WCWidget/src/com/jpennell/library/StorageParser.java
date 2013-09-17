@@ -1,11 +1,30 @@
+/*
+ * project		WCWidget
+ * 
+ * package		com.jpennell.library
+ * 
+ * author		Jerry Pennell
+ * 
+ * date			Sep 17, 2013
+ */
 package com.jpennell.library;
 
 import android.util.Log;
 import com.jpennell.wcwidget.R;
 
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class StorageParser.
+ */
 public class StorageParser {
 
+    /**
+     * Gets the desc image.
+     *
+     * @param descText the desc text
+     * @return the desc image
+     */
     public static Integer getDescImage (String descText) {
         Log.i("DESCRIPTION", descText);
 

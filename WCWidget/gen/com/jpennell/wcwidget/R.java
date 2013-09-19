@@ -68,9 +68,11 @@ public final class R {
         public static final int details=0x7f030003;
         public static final int form=0x7f030004;
         public static final int form_frag=0x7f030005;
-        public static final int list_header=0x7f030006;
-        public static final int list_row=0x7f030007;
-        public static final int widget=0x7f030008;
+        public static final int glassbutton=0x7f030006;
+        public static final int list_header=0x7f030007;
+        public static final int list_row=0x7f030008;
+        public static final int mybackground=0x7f030009;
+        public static final int widget=0x7f03000a;
     }
     public static final class menu {
         public static final int main=0x7f080000;
@@ -78,21 +80,23 @@ public final class R {
     public static final class string {
         public static final int action_settings=0x7f060001;
         public static final int app_name=0x7f060000;
-        public static final int config_desc_text=0x7f060010;
-        public static final int config_search_hint=0x7f06000e;
-        public static final int description_image=0x7f06000d;
-        public static final int description_label=0x7f060009;
+        public static final int config_desc_text=0x7f060012;
+        public static final int config_search_hint=0x7f060010;
+        public static final int description_image=0x7f06000f;
+        public static final int description_label=0x7f06000b;
         public static final int hello_world=0x7f060002;
-        public static final int humidity_label=0x7f06000a;
+        public static final int humidity_label=0x7f06000c;
         public static final int search_button_text=0x7f060004;
         public static final int search_hint=0x7f060003;
-        public static final int set_button_text=0x7f06000f;
-        public static final int tempHi_label=0x7f060008;
+        public static final int set_button_text=0x7f060011;
+        public static final int set_zip_text=0x7f060009;
+        public static final int tempHi_label=0x7f06000a;
         public static final int tempLow_label=0x7f060007;
+        public static final int temp_f=0x7f060008;
         public static final int tempc_label=0x7f060005;
         public static final int tempf_label=0x7f060006;
-        public static final int wind_direction_label=0x7f06000c;
-        public static final int wind_speed_label=0x7f06000b;
+        public static final int wind_direction_label=0x7f06000e;
+        public static final int wind_speed_label=0x7f06000d;
     }
     public static final class style {
         /** 

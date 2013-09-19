@@ -9,6 +9,8 @@
     <string name="tempc_label">Temp(C°):</string>
     <string name="tempf_label">Temp(F°):</string>
     <string name="tempLow_label">Low (F°)</string>
+    <string name="temp_f">F°</string>
+    <string name="set_zip_text">Set Widget Using This Zip Code</string>
     <string name="tempHi_label">High (F°)</string>
     <string name="description_label">Current Condition:</string>
     <string name="humidity_label">Humidity:</string>

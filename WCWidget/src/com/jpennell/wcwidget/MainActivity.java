@@ -34,6 +34,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -148,7 +149,7 @@ public class MainActivity extends Activity implements FormFragment.formListener{
 
             // Convert description text with image and set current condition description image
             ((ImageView)findViewById(R.id.imageView)).setImageResource(StorageParser.getDescImage(ccDesc));
-            ((TextView) findViewById(R.id.textView)).setText(ccTemp + " F");
+            ((TextView) findViewById(R.id.textView)).setText(ccTemp + " F¡");
         } catch (JSONException e) {
             e.printStackTrace();
         }
@@ -279,7 +280,7 @@ public class MainActivity extends Activity implements FormFragment.formListener{
      */
     @Override
     public  void onWeatherSearch() {
-        EditText zipField = (EditText) findViewById(R.id.searchField);
+        final EditText zipField = (EditText) findViewById(R.id.searchField);
         zip = zipField.getText().toString();
         Log.i("CLICK HANDLER", zip);
 
@@ -321,6 +322,10 @@ public class MainActivity extends Activity implements FormFragment.formListener{
                                 Button setWidget = (Button) findViewById(R.id.set_button);
                                 setWidget.setVisibility(View.VISIBLE);
                             }
+                            
+                          //Close out Keyboard
+                            InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+                        	imm.hideSoftInputFromWindow(zipField.getWindowToken(), 0);
                         }
                     } catch (JSONException e) {
                         Log.e("JSON", e.toString());
@@ -337,6 +342,8 @@ public class MainActivity extends Activity implements FormFragment.formListener{
 
         // Start Intent
         startService(intent);
+        
+        
     }
 
 

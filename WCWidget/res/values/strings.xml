@@ -14,7 +14,7 @@
     <string name="humidity_label">Humidity:</string>
     <string name="wind_speed_label">Wind Speed(MPH):</string>
     <string name="wind_direction_label">Wind Direction:</string>
-    <string name="description_image">Description Image</string>
+    <string name="description_image">Condition</string>
     <string name="config_search_hint">Enter zip code</string>
     <string name="set_button_text">Set Zip Code</string>
     <string name="config_desc_text">Please enter a zip code for the weather location you would like to follow.</string>

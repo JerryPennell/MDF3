@@ -100,7 +100,7 @@ public class WeatherWidgetRefresh{
 
                     // Get values from JSON to display
                     desc = results.getJSONObject(0).getJSONArray("weatherDesc").getJSONObject(0).getString("value");
-                    temp = results.getJSONObject(0).getString("temp_F");
+                    temp = results.getJSONObject(0).getString("temp_F")+"F¡";
                 }
             } catch (JSONException e) {
                 Log.e("JSON", e.toString());

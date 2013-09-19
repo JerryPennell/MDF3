@@ -30,8 +30,8 @@ public final class R {
         public static final int warning=0x7f020006;
     }
     public static final class id {
-        public static final int action_refresh=0x7f09001b;
-        public static final int action_web=0x7f09001c;
+        public static final int action_refresh=0x7f09001c;
+        public static final int action_web=0x7f09001d;
         public static final int desc=0x7f090014;
         public static final int desc_header=0x7f090011;
         public static final int desc_text=0x7f090000;
@@ -39,12 +39,12 @@ public final class R {
         public static final int detailDesc=0x7f090006;
         public static final int detail_frag=0x7f090003;
         public static final int form_frag=0x7f090010;
-        public static final int go_button=0x7f09001a;
+        public static final int go_button=0x7f09001b;
         public static final int hi_description=0x7f090008;
         public static final int imageView=0x7f09000c;
         public static final int list=0x7f09000e;
         public static final int low_description=0x7f090007;
-        public static final int now_desc=0x7f090019;
+        public static final int now_desc=0x7f09001a;
         public static final int now_temp=0x7f090017;
         public static final int searchButton=0x7f09000b;
         public static final int searchField=0x7f09000a;
@@ -55,10 +55,11 @@ public final class R {
         public static final int tempLow=0x7f090015;
         public static final int tempLow_header=0x7f090012;
         public static final int textView=0x7f09000d;
+        public static final int textView1=0x7f090018;
         public static final int weatherData=0x7f090005;
         public static final int wind_description=0x7f090009;
         public static final int zip_field=0x7f090001;
-        public static final int zip_location=0x7f090018;
+        public static final int zip_location=0x7f090019;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;

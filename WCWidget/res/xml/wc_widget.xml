@@ -8,6 +8,7 @@
         android:initialLayout="@layout/widget"
         android:widgetCategory="home_screen"
         android:configure="com.jpennell.wcwidget.MainActivity"
-        android:initialKeyguardLayout="@layout/widget">
+        android:initialKeyguardLayout="@layout/widget"
+        android:resizeMode="horizontal|vertical">
 
 </appwidget-provider>

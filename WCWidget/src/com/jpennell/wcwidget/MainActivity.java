@@ -314,8 +314,10 @@ public class MainActivity extends Activity implements FormFragment.formListener{
                             // Call displayCurrent method
                             displayCurrent();
 
-                            // Call displayFiveDay method
-                            displayFiveDay(cursor);
+                            // Call displayFiveDay method  
+                            if(cursor != null){
+                               displayFiveDay(cursor);
+                            }
 
                             if (widgetId != AppWidgetManager.INVALID_APPWIDGET_ID) {
                                 // Show "Set Widget" button

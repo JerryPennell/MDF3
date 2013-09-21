@@ -10,10 +10,6 @@
 package com.jpennell.library;
 
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
 import android.content.ContentProvider;
 import android.content.ContentValues;
 import android.content.UriMatcher;
@@ -22,6 +18,9 @@ import android.database.MatrixCursor;
 import android.net.Uri;
 import android.provider.BaseColumns;
 import android.util.Log;
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 
 // TODO: Auto-generated Javadoc
@@ -43,10 +42,10 @@ public class WeatherContentProvider extends ContentProvider {
         public static final Uri CONTENT_URI = Uri.parse("content://" + AUTHORITY + "/days/");
 
         /** The Constant CONTENT_TYPE. */
-        public static final String CONTENT_TYPE = "vnd.android.cursor.dir/jpennell.weathercast.item";
+        public static final String CONTENT_TYPE = "vnd.android.cursor.dir/jpennell.wcwidget.item";
         
         /** The Constant CONTENT_ITEM_TYPE. */
-        public static final String CONTENT_ITEM_TYPE = "vnd.android.cursor.item/jpennell.weathercast.item";
+        public static final String CONTENT_ITEM_TYPE = "vnd.android.cursor.item/jpennell.wcwidget.item";
 
         // Define Columns
         /** The Constant DATE_COLUMN. */

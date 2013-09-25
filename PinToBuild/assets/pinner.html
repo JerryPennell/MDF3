@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+  <title>Pinterest Login</title>
+  <link href='http://fonts.googleapis.com/css?family=Tangerine|brick-sign|Rancho' rel='stylesheet' type='text/css'>
+  <style type="text/css">
+
+                body {
+					font-family: 'Rancho', serif;
+					font-size: 15px;
+					text-shadow: 2px 2px 2px #aaa;
+					background-color: #CCC;
+                }
+                
+                h1{
+                        font-family: 'Tangerine';
+                        font-size: 25px;
+                        text-align: center;
+                        color: #fff;
+                }
+             
+                #intro{
+                        color: #fff;
+                        font-weight: normal;
+						text-align: center;
+                        font-family: 'Arial', sans-serif;
+                }
+                
+                #launch{
+                        background: #fff;
+                        padding: 5px;
+                        color: ##CC2127;
+                        
+                        border: 1px solid #777777;
+						font-size: 15px;
+						padding: 4px;
+						cursor: pointer;
+						-moz-border-radius: 4px;
+						-webkit-border-radius: 4px;
+                }
+                .inputBox{
+	                font-size: 15px;
+                }
+					
+				.centerIt{
+                    margin: 20%;
+				}
+				
+				#title {
+					border-radius: 15px;
+				} 
+				
+                #userName{
+	                clear: both;
+                }
+			
+				
+				
+        
+  </style>
+</head>
+
+<body>
+  <form name="pinItForm" action="MainActivity" method="get" id="pinForm">
+    <h1 id="title" style="background-color: #CD1C12">Before you build it - Pin It!</h1>
+
+    <p id="intro">Enter your Pinterest username to log in.</p>
+    
+    <div class="centerIt">
+        <span class="inputBox">User Name: </span>
+        <input type="text" name="userName" id="userName" value="" /> 
+        <input id="launch" type="button" value="Launch Pintrest" onclick="sendUsername()"/>
+    </div> 
+  
+    <script type="text/javascript">
+
+    function sendUsername(){
+        var user = document.pinItForm.userName.value;
+erName.value;
+        var result = Android.sendUsernameOver(user);
+    };
+
+    </script>
+</form>
+</body>
+</html>

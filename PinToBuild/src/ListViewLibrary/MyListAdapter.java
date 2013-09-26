@@ -1,20 +1,21 @@
 /*
  * project		PinToBuild
  * 
- * package		ListViewLibrary
+ * package		listViewLibrary
  * 
  * author		Jerry Pennell
  * 
  * date			Sep 25, 2013
  */
 
-package ListViewLibrary;
+package listViewLibrary;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import ListViewLibrary.MyHelper.RemoteImageTask;
-import ListViewLibrary.MyHelper.TaskCallback;
+import listViewLibrary.MyHelper.RemoteImageTask;
+import listViewLibrary.MyHelper.TaskCallback;
+
 import android.app.Activity;
 import android.content.res.Resources;
 import android.graphics.Bitmap;

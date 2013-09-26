@@ -36,9 +36,12 @@ public final class R {
         public static final int button_secondary=0x7f020001;
         public static final int button_secondary_selected=0x7f020002;
         public static final int ic_launcher=0x7f020003;
+        public static final int location_web_site=0x7f020004;
+        public static final int navigation_refresh=0x7f020005;
     }
     public static final class id {
-        public static final int action_settings=0x7f090008;
+        public static final int action_refresh=0x7f090008;
+        public static final int action_web=0x7f090009;
         public static final int desc_tv=0x7f090005;
         public static final int list=0x7f090000;
         public static final int pin_bt=0x7f090006;
@@ -58,6 +61,8 @@ public final class R {
         public static final int main=0x7f080000;
     }
     public static final class string {
+        public static final int Pintrest=0x7f06000d;
+        public static final int Refresh=0x7f06000c;
         public static final int action_settings=0x7f060001;
         public static final int app_name=0x7f060000;
         public static final int board=0x7f060003;

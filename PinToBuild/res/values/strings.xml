@@ -13,5 +13,6 @@
     <string name="pin_desc_hint">Pin description</string>
     <string name="image_uri">Image Uri: </string>
     <string name="pin_desc_table">This is a place table</string>
-
+    <string name="Refresh">Refresh</string>
+    <string name="Pintrest">Pintrest</string>
 </resources>

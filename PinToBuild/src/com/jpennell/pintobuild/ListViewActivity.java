@@ -10,7 +10,6 @@
 
 package com.jpennell.pintobuild;
 
-import ListViewLibrary.MyListView;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -24,6 +23,8 @@ import com.pinterest.pinit.PinItButton;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+
+import listViewLibrary.MyListView;
 
 // TODO: Auto-generated Javadoc
 /**

@@ -1,14 +1,14 @@
 /*
  * project		PinToBuild
  * 
- * package		ListViewLibrary
+ * package		listViewLibrary
  * 
  * author		Jerry Pennell
  * 
  * date			Sep 25, 2013
  */
 
-package ListViewLibrary;
+package listViewLibrary;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;

@@ -47,8 +47,11 @@ public class PinIt extends Activity {
 		setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
 		//CREATE AND GET REFERENCE TO WEBVIEW AND ADD JAVASCRIPT COMPATIBILITY
+		
 		WebView webView = (WebView) findViewById(R.id.webView1);
 		WebSettings theWebSettings = webView.getSettings();
+		
+		webView.getSettings().setUserAgentString("Android");
 		theWebSettings.setAllowFileAccess(true);
 		theWebSettings.setJavaScriptEnabled(true);
 		webView.addJavascriptInterface(new JSInterface(this), "Android");	
@@ -85,6 +88,22 @@ public class PinIt extends Activity {
 		public boolean sendUsernameOver(String user){
 			Log.i("user", user);
 			Intent intent = new Intent(PinIt.this, MainActivity.class);
+			intent.putExtra("USER",  user); 
+	        startActivity(intent);
+
+			return true;
+		}
+		
+		/**
+		 * Send username over.
+		 *
+		 * @param user the user
+		 * @return true, if successful
+		 */
+		@JavascriptInterface
+		public boolean sendUsernameOverToList(String user){
+			Log.i("user", user);
+			Intent intent = new Intent(PinIt.this, ListViewActivity.class);
 			intent.putExtra("USER",  user); 
 	        startActivity(intent);
 

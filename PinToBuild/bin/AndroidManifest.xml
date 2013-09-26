@@ -27,7 +27,7 @@
             android:label="@string/app_name" >
          </activity>
            <activity
-            android:name=".DemoListView"
+            android:name=".ListViewActivity"
             android:label="@string/listview_name" >
         </activity>
     </application>

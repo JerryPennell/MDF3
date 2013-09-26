@@ -144,8 +144,11 @@ private class MyAsyncTask extends AsyncTask<Void, Void, ArrayList<String>> {
 							String myParent = parent.getItemAtPosition(pos).toString().toLowerCase();	
 							myParent = myParent.replace(' ', '-');
 							String theURL = (PINTREST_URL +  getIntent().getExtras().getString("USER") +"/" + myParent);
+							
+							Log.i("PASSED URL:",theURL);
 
 							WebView boardWebView = (WebView) findViewById(R.id.webview);
+							boardWebView.getSettings().setUserAgentString("Android");
 							boardWebView.loadUrl(theURL);
 
 							Log.i("name", parent.getItemAtPosition(pos).toString());

@@ -28,6 +28,7 @@ import android.webkit.WebView;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.Spinner;
 
 // TODO: Auto-generated Javadoc
@@ -35,6 +36,12 @@ import android.widget.Spinner;
  * The Class MainActivity.
  */
 public class MainActivity extends Activity {
+	
+	 public static final String TAG = "MainActivityCall";
+	 
+	 public static final String CLIENT_ID = "1433332";
+	 private ListView mList;
+	 private ArrayAdapter<String> mAdapter;
 
 	/** The spinner. */
 	Spinner spinner;
@@ -62,6 +69,8 @@ public class MainActivity extends Activity {
 		new MyAsyncTask().execute();
 
 	}
+	
+	
 
 	/**
  * The Class MyTask.
@@ -93,6 +102,7 @@ private class MyAsyncTask extends AsyncTask<Void, Void, ArrayList<String>> {
 					Log.i("LINK: ",linkText);
 				}
 			} catch (IOException e) {
+				Log.e(PINTREST_URL, e.getMessage());
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}

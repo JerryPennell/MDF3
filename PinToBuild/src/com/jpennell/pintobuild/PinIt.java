@@ -54,7 +54,7 @@ public class PinIt extends Activity {
 		webView.getSettings().setUserAgentString("Android");
 		theWebSettings.setAllowFileAccess(true);
 		theWebSettings.setJavaScriptEnabled(true);
-		webView.addJavascriptInterface(new JSInterface(this), "Android");	
+		webView.addJavascriptInterface(new JSInterface(this), "Android");
 		webView.loadUrl(DEFAULT_URL);
 
 
